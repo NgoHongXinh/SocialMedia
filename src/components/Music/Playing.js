@@ -12,7 +12,7 @@ export default function Playing() {
         handleSetSong(song.id - 1)
     }
   return (
-    <div className="fixed bottom-0 w-full  ">
+    <div className="fixed bottom-0 w-full p-5">
       <AudioPlayer
         className="player-music"
         src={song.url}

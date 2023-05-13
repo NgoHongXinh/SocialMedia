@@ -18,9 +18,9 @@ export default function Music() {
            setSong(song)
   }
   return (
-      <div>
+      <div className='' >
         <Songs.Provider value={{ DataSongs, song, handleSetSong}}>
-        <div className="grid grid-cols-3 bg-slate-700 overflow-x-hidden">
+        <div className="md:grid grid-cols-3  gap-2 bg-slate-700 overflow-x-hidden">
           {/* span 1 */}
           <DetailSong />
           {/* span 2 */}

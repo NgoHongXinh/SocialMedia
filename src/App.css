@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.link {
+  color: white;
+}
+
+/* Specific styles for active links */
+.link-active {
+  color: black;
+  background: orange;
+}
+
