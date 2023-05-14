@@ -20,13 +20,13 @@ export default function Music() {
   return (
       <div className='' >
         <Songs.Provider value={{ DataSongs, song, handleSetSong}}>
-        <div className="md:grid grid-cols-3  gap-2 bg-slate-700 overflow-x-hidden">
+        <div className="sm:grid grid-cols-3  gap-2  bg-slate-700 overflow-x-hidden mt-5 p-0">
           {/* span 1 */}
           <DetailSong />
           {/* span 2 */}
           <ListSong />
         </div>
-        <Playing/>
+         <Playing/>
       </Songs.Provider>
       </div>
   )

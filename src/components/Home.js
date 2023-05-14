@@ -11,7 +11,7 @@ export default function Home() {
         transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
         className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2 p-5"
       >
-        <div className="w-full md:w-1/3 text-left">
+        <div className="w-full md:w-1/2 text-left">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -61,11 +61,26 @@ export default function Home() {
         </div>
         <motion.div
           initial={{ opacity: 0, y: -180 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 0.6, y: 0, borderRadius:"30%"}}
           transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-          className="h-auto max-w-lg ml-auto sm:w-2/3 shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30  mt-8 sm:mt-0"
+          className="h-screen   ml-0 sm:w-2/2  mt-8 sm:mt-0"
         >
-          <img src={avatar} alt='avatar'/>
+          <motion.img 
+          className='w-full'
+          animate={{
+            scale: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            rotate: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            borderTopLeftRadius: ["70%","10%", "20%","50%", "40%", "90%", "60%", "70%", "80%", "50%"],
+            borderBottomLeftRadius: ["50%","10%", "20%","60%", "40%", "50%", "60%", "70%", "90%", "50%"]
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1],
+            repeat: Infinity,
+            repeatDelay: 1,
+          }}
+          src={avatar} alt='avatar'/>
           {/* <img
             src={
               activeTheme === 'dark' ? developerLight : developerDark

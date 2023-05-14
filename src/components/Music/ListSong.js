@@ -17,8 +17,8 @@ export default function ListSong() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-        className="sm:col-span-2 h-[80vh] overflow-y-srcoll">
-        <motion.table className="w-full text-gray-700  bg-gray-50 dark:bg-gray-700 dark:text-gray-400 p-0">
+        className="col-span-2 h-[80vh] overflow-y-srcoll">
+        <motion.table className="w-full text-gray-700  bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
           <thead className="sticky top-0 dark:bg-gray-700 text-white">
             <tr>
               <th scope="col" class="p-4">#</th>
@@ -33,7 +33,7 @@ export default function ListSong() {
             {DataSongs.map((song, index) => (
               <tr
                 key={index}
-                className={`bg-slate-800 text-xs text-gray-500 hover:bg-slate-600 ${idSong === song.id && 'bg-slate-600 text-teal-400'}`}
+                className={`bg-slate-500 text-xs text-gray-900 hover:bg-slate-600 ${idSong === song.id && 'bg-slate-600 text-teal-400'}`}
                 onClick={() => handlePlaySong(song.id)}
               >
                 <td className="text-center">{index + 1}</td>

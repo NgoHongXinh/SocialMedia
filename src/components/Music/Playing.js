@@ -12,7 +12,8 @@ export default function Playing() {
         handleSetSong(song.id - 1)
     }
   return (
-    <div className="fixed bottom-0 w-full p-5">
+    <div className="fixed bottom-0 right-0 w-full ml-0 bg-white">
+     <h2 className='text-gray-700 lg:hidden text-center text-2xl'>{song.name}</h2>
       <AudioPlayer
         className="player-music"
         src={song.url}
@@ -22,6 +23,7 @@ export default function Playing() {
         onClickNext={handleClickNext}
         onClickPrevious={handleClickPre}
       />
+      
     </div>
   )
 }
