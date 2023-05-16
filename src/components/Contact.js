@@ -14,7 +14,7 @@ export default function Contact() {
         <div id="profile" className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
           <div className="p-4 md:p-12 text-center lg:text-left">
             {/* Image for mobile view*/}
-            <div className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style={{backgroundImage: 'url("https://source.unsplash.com/MP0IUfwrn0A")'}} />
+            <div><img src={anh}  className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"   /></div>
             <h1 className="text-3xl font-bold pt-8 lg:pt-0">NGÔ HỒNG XINH</h1>
             <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25" />
             <p className="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
@@ -33,7 +33,7 @@ export default function Contact() {
                     <path d="M22.288 21h-20.576c-.945 0-1.712-.767-1.712-1.712v-13.576c0-.945.767-1.712 1.712-1.712h20.576c.945 0 1.712.767 1.712 1.712v13.576c0 .945-.767 1.712-1.712 1.712zm-10.288-6.086l-9.342-6.483-.02 11.569h18.684v-11.569l-9.322 6.483zm8.869-9.914h-17.789l8.92 6.229s6.252-4.406 8.869-6.229z"></path>
                   </svg> xinhkg00@gmail.com
             </p>
-            <div className="pt-12 pb-8">
+            <div className="pt-12 pb-8 flex items-center justify-center">
               <a data-te-toggle="tooltip" title="" href="https://mail.google.com/mail/?view=cm&amp;to=xinhkg00@gmail.com&amp;su=Check%20out%20this%20project&amp;&amp;bcc=%7Bemail_address%7D&amp;cc=%7Bemail_address%7D" target="_blank" class="mx-2 flex items-center" data-te-original-title="Share via Gmail">
                 <button className=" bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full" >Hire me</button>
               </a>
@@ -52,24 +52,26 @@ export default function Contact() {
                   <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                 </svg>
               </a>
-              {/* <a className="link mr-2" href="https://github.com/NgoHongXinh" data-tippy-content="@linkIn_handle">
-                <svg className="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <a className="link mr-2" href="https://github.com/NgoHongXinh" data-tippy-content="@linkedIn_handle">
+                <svg className="h-6 w-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                   <title>LinkIn</title>
-                  <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500"><path d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 01-1.548-1.549 1.548 1.548 0 111.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM19.67 3H4.329C3.593 3 3 3.58 3 4.297v15.406C3 20.42 3.594 21 4.328 21h15.338C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3h.003z"></path></svg>
+                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
                   </svg>
-              </a> */}
-              
-              
+              </a>
             </div>
             {/* Use https://simpleicons.org/ to find the svg for your preferred product */}
           </div>
         </div>
         {/*Img Col*/}
-        <div className="w-full lg:w-2/5">
+        <motion.div
+          initial={{ opacity: 0, y: -180 }}
+          animate={{ opacity: 0.8, y: 0, }}
+          transition={{ ease: 'easeInOut', duration: 2, delay: 0.2 }}
+          className="w-full lg:w-2/5">
           {/* Big profile image for side bar (desktop) */}
           <img src={anh} className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" />
         
-        </div>
+        </motion.div>
        
       </div>
     </motion.section>

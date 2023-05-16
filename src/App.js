@@ -9,7 +9,7 @@ import { Route, Routes, BrowserRouter} from 'react-router-dom'
 
 function App() {
   return (
-    <div  className="w-full h-full bg-gray-800 transition duration-300 p-5">
+    <div  className="w-full h-full p-5">
         
                     <BrowserRouter>
                         <Nav/>

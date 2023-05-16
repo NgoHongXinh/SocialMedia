@@ -6,9 +6,8 @@ import { Songs } from "../../Context";
 import DataSongs from "../../data/song.json";
 import { useState } from "react";
 
-
 export default function Music() {
-  const [song, setSong] = useState(DataSongs[0])
+  const [song, setSong] = useState(0)
 
   const handleSetSong = (idSong) => {
     const song = DataSongs.find(song => song.id === idSong)
@@ -18,16 +17,16 @@ export default function Music() {
            setSong(song)
   }
   return (
-      <div className='' >
-        <Songs.Provider value={{ DataSongs, song, handleSetSong}}>
-        <div className="sm:grid grid-cols-3  gap-2  bg-slate-700 overflow-x-hidden mt-5 p-0">
-          {/* span 1 */}
-          <DetailSong />
-          {/* span 2 */}
-          <ListSong />
-        </div>
-         <Playing/>
-      </Songs.Provider>
+      <div className='mt-0' >
+       <Songs.Provider value={{ DataSongs, song, handleSetSong}}>
+         <div>
+          <Playing/>
+          {/* <ListSong/> */}
+         </div>
+      </Songs.Provider> 
+   
+        {/* <AudioPlayer tracks={tracks} /> */}
       </div>
   )
 }
+ 

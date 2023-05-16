@@ -1,23 +1,41 @@
 import React, { useState } from 'react';
 import {NavLink } from "react-router-dom";
+import xinh from "./image/xinh.jpg"
 
 export default function Nav() {
 const [isOpen, setIsOpen] = useState(false);
+// const [isDropdown, setDropdown] = useState(false);
   return (
     <div className='pb-10'>
-        <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+        <nav className="bg-white md:opacity-50 hover:opacity-100 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <div className='mr-4'>
                 <a href="#" class="flex items-center">
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SOCIAL MEDIA</span>
+                    <span class="self-center opacity-100 text-2xl font-semibold whitespace-nowrap dark:text-white">SOCIAL MEDIA</span>
                 </a>
             </div>
           <div className="flex block md:order-2">
-            <button 
+            {/*Dropdown */}
+            {/* <button 
+            onClick={() => setDropdown(!isDropdown)}
             type="button" 
             className="flex mr-6 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-3 focus:ring-gray-300 dark:focus:ring-gray-600">
-                <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="user photo"/>
-            </button>
+                <img class="w-10 h-10 rounded-full" src={xinh} alt="user photo"/>
+            </button> */}
+             {/* Dropdown menu */}
+            {/* <div className={`block  absolute mt-12  bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 ${isDropdown ? "block" : "hidden"}`}>
+              <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" >
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 text-red-500 hover:text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                </li>
+              </ul>
+            </div> */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -38,16 +56,16 @@ const [isOpen, setIsOpen] = useState(false);
                 </svg>
             </button>
           </div>
-          <div className={`block items-center justify-between  w-full md:flex md:w-auto md:order-1mr-4 ${isOpen ? "block" : "hidden"}`}>
+          <div className={`block items-center justify-between  w-full md:flex md:w-auto md:order-1 mr-4 ${isOpen ? "block" : "hidden"}`}>
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <NavLink to="/" style={({ isActive }) => ({ color: isActive ? 'white' : 'gray' })} className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" >Home</NavLink>
+                <NavLink to="/" style={({ isActive }) => ({ color: isActive ? 'white' : 'gray', })} className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" >Home</NavLink>
               </li>
               <li>
-                <NavLink to="music" style={({ isActive }) => ({ color: isActive ? 'white' : 'gray' })} className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Music</NavLink>
+                <NavLink to="music" style={({ isActive }) => ({ color: isActive ? 'white' : 'gray'})} className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Music</NavLink>
               </li>
               <li>
-                <NavLink to="video" style={({ isActive }) => ({ color: isActive ? 'white' : 'gray' })} className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Video</NavLink>
+                <NavLink to="video" style={({ isActive }) => ({ color: isActive ? 'white' : 'gray',})} className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Video</NavLink>
               </li>
               <li>
                 <NavLink to="contact" style={({ isActive }) => ({ color: isActive ? 'white' : 'gray' })} className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</NavLink>
