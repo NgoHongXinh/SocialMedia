@@ -49,20 +49,20 @@ export default function Playing() {
           
         
         <AudioPlayer
-          className="border-2"
           src={song.url}
           layout="stacked-reverse"
           showSkipControls={true}
-          showJumpControls={true}
-          autoPlay
+          showJumpControls={false}
+          autoPlay={true}
           onClickNext={handleClickNext}
           onClickPrevious={handleClickPre}
         />
         
       </motion.div>
-      <div className={`block  ${open ? "block" : "hidden"}`}>
+      <motion.div 
+      className={`block  ${open ? "block" : "hidden"}`}>
             <ListSong/>
-      </div>
+      </motion.div>
     </motion.div>
     
   )

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Songs } from "../../Context";
 import DataSongs from "../../data/song.json";
-
+import {motion} from "framer-motion";
 
 export default function ListSong() {
     const { DataSongs, handleSetSong, song } = useContext(Songs);
@@ -17,7 +17,11 @@ export default function ListSong() {
 
     return (
       // Modal
-      <div className="h-full w-full overflow-y-auto overflow-x-hidden outline-none p-4">
+      <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: 'easeInOut', duration: 0.1, delay: 0.1 }}
+      className="h-full w-full overflow-y-auto overflow-x-hidden outline-none p-4">
         <div>
           <div className="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
             {/* Tile */}
@@ -55,6 +59,6 @@ export default function ListSong() {
               </div>
             </div>
         </div>
-      </div>
+      </motion.div>
   )
 }
